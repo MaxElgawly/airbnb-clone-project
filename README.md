@@ -56,3 +56,27 @@ Coordinates the team’s efforts, sets deadlines, assigns responsibilities, and 
 ### 6. QA Engineer (Tester)
 Tests the application thoroughly to catch bugs and ensure quality standards are met before any release.
 
+
+
+
+## Technology Stack
+
+- **Python**: The primary programming language used to build backend logic and system functionality.
+
+- **Django**: A high-level Python web framework used to develop robust and scalable web applications, including RESTful APIs.
+
+- **PostgreSQL**: A powerful open-source relational database system used to store and manage data persistently.
+
+- **HTML/CSS**: Used to build and style the user interface of the web application.
+
+- **JavaScript**: Adds interactivity and dynamic content handling in the frontend.
+
+- **GraphQL**: A query language for APIs that allows clients to request exactly the data they need, improving performance and flexibility.
+
+- **Git**: Version control tool used to manage source code changes across the team.
+
+- **GitHub**: Hosts the code repository and facilitates collaboration via pull requests and issues.
+
+- **Docker** (optional, if mentioned): Used to containerize the application for easier development and deployment across environments.
+
+- **CI/CD Tools** (e.g., GitHub Actions): Automate testing, building, and deploying of the application.
