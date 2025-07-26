@@ -119,3 +119,74 @@ Tests the application thoroughly to catch bugs and ensure quality standards are 
 - **amount**: total payment amount
 - **payment_method**: e.g., credit card, PayPal
 - **status**: success, pending, failed
+
+
+## Feature Breakdown
+
+### 1. User Management
+Allows users to register, log in, and manage their profiles. This feature includes authentication and role-based access (e.g., host or guest) to ensure secure use of the platform.
+
+### 2. Property Management
+Hosts can list new properties, including descriptions, photos, location, and pricing. This feature enables property owners to manage their offerings directly from the platform.
+
+### 3. Booking System
+Enables guests to book available properties for specific dates. It includes booking validation, availability checks, and links to payment processing.
+
+### 4. Reviews and Ratings
+Guests can leave reviews and star ratings after a stay. This helps build trust in the platform and improves the visibility of high-quality listings.
+
+### 5. Payment Integration
+Handles secure payments through various methods (e.g., credit card, PayPal). Ensures both host and guest transactions are completed and recorded safely.
+
+### 6. Search and Filtering
+Users can search for properties by location, price, availability, and other filters. This makes it easier to find relevant listings quickly.
+
+### 7. Admin Dashboard (Optional)
+Admins can monitor system activity, manage users or listings, and enforce platform rules. Useful for maintaining quality and handling reported content.
+
+
+
+## API Security
+
+To ensure the integrity and safety of our backend APIs, we will implement the following key security measures:
+
+### 1. Authentication
+Users must prove their identity before accessing secure endpoints. We will use token-based authentication (e.g., JWT) to validate sessions and prevent unauthorized access.
+
+### 2. Authorization
+Once authenticated, users can only perform actions allowed by their role (e.g., host vs. guest). This prevents users from accessing or modifying data that doesn’t belong to them.
+
+### 3. Rate Limiting
+To prevent abuse and denial-of-service (DoS) attacks, we will limit the number of requests a user can make in a short time window.
+
+### 4. Input Validation & Sanitization
+All inputs will be validated to prevent injection attacks (e.g., SQL injection, XSS). Sanitizing user input protects the application from harmful payloads.
+
+### 5. HTTPS Enforcement
+All data will be transmitted over HTTPS to ensure that sensitive data (like passwords and payment info) is encrypted in transit.
+
+
+
+### Why API Security Matters
+
+- **Protecting User Data**: Personal and payment information must be safeguarded to build trust and comply with data protection laws.
+- **Securing Transactions**: Payment processing must be secure to avoid fraud and financial loss.
+- **Preventing Unauthorized Access**: Ensures that users can only access their own data and actions.
+- **Maintaining Platform Integrity**: Stops bots, spammers, and attackers from disrupting the system.
+
+
+
+## CI/CD Pipeline
+
+CI/CD stands for Continuous Integration and Continuous Deployment/Delivery. It is a process that automates building, testing, and deploying code every time a change is made, ensuring faster and safer releases.
+
+By integrating CI/CD pipelines into the project, we reduce manual work, catch bugs early, and ensure code quality with consistent deployment practices.
+
+
+
+### Tools for CI/CD
+
+- **GitHub Actions**: Automates workflows for building, testing, and deploying directly from GitHub.
+- **Docker**: Containerizes the application, making it portable and consistent across environments.
+- **Docker Hub**: Used to store and share Docker images for deployment.
+- **Heroku / Render / AWS / Railway** (optional): Hosting services that support automated deployments from CI/CD pipelines.
