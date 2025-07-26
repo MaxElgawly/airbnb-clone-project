@@ -80,3 +80,42 @@ Tests the application thoroughly to catch bugs and ensure quality standards are 
 - **Docker** (optional, if mentioned): Used to containerize the application for easier development and deployment across environments.
 
 - **CI/CD Tools** (e.g., GitHub Actions): Automate testing, building, and deploying of the application.
+
+
+
+## Database Design
+
+### 1. Users
+- **id**: unique identifier
+- **name**: full name of the user
+- **email**: user’s email address
+- **password_hash**: securely stored password
+- **role**: host or guest
+
+### 2. Properties
+- **id**: unique property ID
+- **owner_id**: reference to the user (host)
+- **title**: property title
+- **location**: address or city
+- **price_per_night**: rental cost
+
+### 3. Bookings
+- **id**: unique booking ID
+- **user_id**: the guest who made the booking
+- **property_id**: the property being booked
+- **start_date**: check-in date
+- **end_date**: check-out date
+
+### 4. Reviews
+- **id**: unique review ID
+- **booking_id**: related booking
+- **user_id**: who left the review
+- **rating**: numerical score (e.g., 1 to 5)
+- **comment**: optional text feedback
+
+### 5. Payments
+- **id**: unique payment ID
+- **booking_id**: the booking being paid for
+- **amount**: total payment amount
+- **payment_method**: e.g., credit card, PayPal
+- **status**: success, pending, failed
